@@ -20,16 +20,11 @@ export class GoogleTrends extends React.Component {
   }
 
   render() {
-    const { profile, prop, imgProp, keyword } = this.props;
+    const { profile, prop = 'google_trends', imgProp = 'google_trends_img', keyword } = this.props;
     const { copied } = this.state;
     if (!profile) {
       return (
         <div style={{ fontSize: 14 }}>Not available at this time... </div>
-      );
-    }
-    if (!profile[prop] || !profile[prop].data) {
-      return (
-        <div style={{ fontSize: 14 }}>Not trends data at this time... </div>
       );
     }
     if (profile[imgProp] && profile[imgProp].url) {
@@ -37,13 +32,18 @@ export class GoogleTrends extends React.Component {
       const btnText = copied ? 'Copied' : 'Copy Img';
       return (
         <div className='react-components-show-button'>
-          <img alt={`${profile.ticker} - ${profile.name} trends`} src={profile[imgProp].url} style={{ width: '100%' }} />
+          <img alt={`${profile.ticker} - ${profile.name} google trends`} src={profile[imgProp].url} style={{ width: '100%' }} />
           <CopyToClipboard text={profile[imgProp].url || ''}
             onCopy={() => this.setState({ copied: true })}
           >
             <button className={btnClass} value={btnText}>{btnText}</button>
           </CopyToClipboard>
         </div>
+      );
+    }
+    if (!profile[prop] || !profile[prop].data) {
+      return (
+        <div style={{ fontSize: 14 }}>No trends data at this time... </div>
       );
     }
 

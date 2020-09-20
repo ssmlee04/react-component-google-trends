@@ -64,8 +64,10 @@ function (_React$Component) {
 
       var _this$props = this.props,
           profile = _this$props.profile,
-          prop = _this$props.prop,
-          imgProp = _this$props.imgProp,
+          _this$props$prop = _this$props.prop,
+          prop = _this$props$prop === void 0 ? 'google_trends' : _this$props$prop,
+          _this$props$imgProp = _this$props.imgProp,
+          imgProp = _this$props$imgProp === void 0 ? 'google_trends_img' : _this$props$imgProp,
           keyword = _this$props.keyword;
       var copied = this.state.copied;
 
@@ -77,21 +79,13 @@ function (_React$Component) {
         }, "Not available at this time... ");
       }
 
-      if (!profile[prop] || !profile[prop].data) {
-        return _react["default"].createElement("div", {
-          style: {
-            fontSize: 14
-          }
-        }, "Not trends data at this time... ");
-      }
-
       if (profile[imgProp] && profile[imgProp].url) {
         var btnClass = copied ? 'react-components-show-url btn btn-sm btn-danger disabled font-10' : 'react-components-show-url btn btn-sm btn-warning font-10';
         var btnText = copied ? 'Copied' : 'Copy Img';
         return _react["default"].createElement("div", {
           className: "react-components-show-button"
         }, _react["default"].createElement("img", {
-          alt: "".concat(profile.ticker, " - ").concat(profile.name, " trends"),
+          alt: "".concat(profile.ticker, " - ").concat(profile.name, " google trends"),
           src: profile[imgProp].url,
           style: {
             width: '100%'
@@ -107,6 +101,14 @@ function (_React$Component) {
           className: btnClass,
           value: btnText
         }, btnText)));
+      }
+
+      if (!profile[prop] || !profile[prop].data) {
+        return _react["default"].createElement("div", {
+          style: {
+            fontSize: 14
+          }
+        }, "No trends data at this time... ");
       }
 
       var initialData = profile[prop].data;
