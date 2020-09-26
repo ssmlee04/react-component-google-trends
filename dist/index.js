@@ -103,15 +103,8 @@ function (_React$Component) {
         }, btnText)));
       }
 
-      if (!profile[prop] || !profile[prop].data) {
-        return _react["default"].createElement("div", {
-          style: {
-            fontSize: 14
-          }
-        }, "No trends data at this time... ");
-      }
+      var initialData = _.get(profile, "".concat(prop, ".data"), []);
 
-      var initialData = profile[prop].data;
       var data = {
         labels: initialData.map(function (d) {
           return d.formattedTime;
@@ -120,13 +113,13 @@ function (_React$Component) {
           // label: 'interest over time',
           fill: false,
           lineTension: 0.1,
-          backgroundColor: 'rgba(75,192,192,0.2)',
-          borderColor: 'rgba(75,192,192,1)',
+          backgroundColor: 'crimson',
+          borderColor: 'crimson',
           borderCapStyle: 'butt',
           borderDash: [],
           borderDashOffset: 0.0,
           borderJoinStyle: 'miter',
-          pointBorderColor: 'rgba(75,192,192,1)',
+          pointBorderColor: 'crimson',
           // pointBackgroundColor: '#fff',
           pointBorderWidth: 1,
           pointHoverRadius: 5,

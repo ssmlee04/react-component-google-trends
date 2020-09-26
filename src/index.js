@@ -41,13 +41,8 @@ export class GoogleTrends extends React.Component {
         </div>
       );
     }
-    if (!profile[prop] || !profile[prop].data) {
-      return (
-        <div style={{ fontSize: 14 }}>No trends data at this time... </div>
-      );
-    }
 
-    const initialData = profile[prop].data;
+    const initialData = _.get(profile, `${prop}.data`, []);
     const data = {
       labels: initialData.map(d => d.formattedTime),
       datasets: [
@@ -55,13 +50,13 @@ export class GoogleTrends extends React.Component {
           // label: 'interest over time',
           fill: false,
           lineTension: 0.1,
-          backgroundColor: 'rgba(75,192,192,0.2)',
-          borderColor: 'rgba(75,192,192,1)',
+          backgroundColor: 'crimson',
+          borderColor: 'crimson',
           borderCapStyle: 'butt',
           borderDash: [],
           borderDashOffset: 0.0,
           borderJoinStyle: 'miter',
-          pointBorderColor: 'rgba(75,192,192,1)',
+          pointBorderColor: 'crimson',
           // pointBackgroundColor: '#fff',
           pointBorderWidth: 1,
           pointHoverRadius: 5,
