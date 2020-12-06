@@ -137,11 +137,20 @@ function (_React$Component) {
       };
       var options = {
         legend: {
-          display: false
+          display: false,
+          label: {
+            fontSize: 8
+          }
         },
         scales: {
           xAxes: [{
             ticks: {
+              fontSize: 8
+            }
+          }],
+          yAxes: [{
+            labels: {
+              show: true,
               fontSize: 8
             }
           }]

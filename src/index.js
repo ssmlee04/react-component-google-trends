@@ -72,7 +72,10 @@ export class GoogleTrends extends React.Component {
     };
     const options = {
       legend: {
-        display: false
+        display: false,
+        label: {
+          fontSize: 8
+        }
       },
       scales: {
         xAxes: [{
@@ -80,6 +83,12 @@ export class GoogleTrends extends React.Component {
             fontSize: 8
           },
         }],
+        yAxes: [{
+          labels: {
+            show: true,
+            fontSize: 8
+          },
+        }]
       },
     };
     return (
