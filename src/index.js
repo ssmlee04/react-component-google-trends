@@ -48,15 +48,23 @@ export class GoogleTrends extends React.Component {
       labels: initialData.map(d => d.formattedTime),
       datasets: [
         {
-          type: 'line',
           fill: false,
+          lineTension: 0.1,
           backgroundColor: 'crimson',
           borderColor: 'crimson',
-          lineTension: 1,
-          borderWidth: 1,
-          pointRadius: 0,
+          borderCapStyle: 'butt',
+          borderDash: [],
+          borderDashOffset: 0.0,
+          borderJoinStyle: 'miter',
+          pointBorderColor: 'crimson',
+          // pointBackgroundColor: '#fff',
           pointBorderWidth: 1,
-          pointHoverRadius: 0,
+          pointHoverRadius: 3,
+          // pointHoverBackgroundColor: 'rgba(75,192,192,1)',
+          pointHoverBorderColor: 'rgba(220,220,220,1)',
+          pointHoverBorderWidth: 2,
+          pointRadius: 1,
+          pointHitRadius: 3,
           data: initialData.map(d => d.value[0])
         }
       ]
