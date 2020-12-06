@@ -129,7 +129,7 @@ function (_React$Component) {
           pointHoverBorderColor: 'rgba(220,220,220,1)',
           pointHoverBorderWidth: 2,
           pointRadius: 1,
-          pointHitRadius: 10,
+          pointHitRadius: 2,
           data: initialData.map(function (d) {
             return d.value[0];
           })
@@ -149,8 +149,7 @@ function (_React$Component) {
             }
           }],
           yAxes: [{
-            labels: {
-              show: true,
+            ticks: {
               fontSize: 8
             }
           }]

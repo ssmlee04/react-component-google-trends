@@ -65,7 +65,7 @@ export class GoogleTrends extends React.Component {
           pointHoverBorderColor: 'rgba(220,220,220,1)',
           pointHoverBorderWidth: 2,
           pointRadius: 1,
-          pointHitRadius: 10,
+          pointHitRadius: 2,
           data: initialData.map(d => d.value[0])
         }
       ]
@@ -84,8 +84,7 @@ export class GoogleTrends extends React.Component {
           },
         }],
         yAxes: [{
-          labels: {
-            show: true,
+          ticks: {
             fontSize: 8
           },
         }]
