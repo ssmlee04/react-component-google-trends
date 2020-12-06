@@ -119,6 +119,7 @@ function (_React$Component) {
           lineTension: 1,
           borderWidth: 1,
           pointRadius: 0,
+          pointBorderWidth: 1,
           pointHoverRadius: 0,
           data: initialData.map(function (d) {
             return d.value[0];

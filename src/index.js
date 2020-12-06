@@ -55,6 +55,7 @@ export class GoogleTrends extends React.Component {
           lineTension: 1,
           borderWidth: 1,
           pointRadius: 0,
+          pointBorderWidth: 1,
           pointHoverRadius: 0,
           data: initialData.map(d => d.value[0])
         }
