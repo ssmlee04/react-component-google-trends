@@ -114,12 +114,12 @@ function (_React$Component) {
         datasets: [{
           type: 'line',
           fill: false,
-          backgroundColor: 'darkred',
-          borderColor: 'darkred',
-          lineTension: 0.5,
+          backgroundColor: 'crimson',
+          borderColor: 'crimson',
+          lineTension: 1,
           borderWidth: 1,
-          pointRadius: 1,
-          pointHoverRadius: 1,
+          pointRadius: 0,
+          pointHoverRadius: 0,
           data: initialData.map(function (d) {
             return d.value[0];
           })

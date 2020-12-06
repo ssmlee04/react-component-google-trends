@@ -50,12 +50,12 @@ export class GoogleTrends extends React.Component {
         {
           type: 'line',
           fill: false,
-          backgroundColor: 'darkred',
-          borderColor: 'darkred',
-          lineTension: 0.5,
+          backgroundColor: 'crimson',
+          borderColor: 'crimson',
+          lineTension: 1,
           borderWidth: 1,
-          pointRadius: 1,
-          pointHoverRadius: 1,
+          pointRadius: 0,
+          pointHoverRadius: 0,
           data: initialData.map(d => d.value[0])
         }
       ]
