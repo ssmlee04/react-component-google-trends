@@ -69,8 +69,7 @@ function (_React$Component) {
           _this$props$prop = _this$props.prop,
           prop = _this$props$prop === void 0 ? 'google_trends' : _this$props$prop,
           _this$props$imgProp = _this$props.imgProp,
-          imgProp = _this$props$imgProp === void 0 ? 'google_trends_img' : _this$props$imgProp,
-          keyword = _this$props.keyword;
+          imgProp = _this$props$imgProp === void 0 ? 'google_trends_img' : _this$props$imgProp;
       var copied = this.state.copied;
 
       if (!profile) {
@@ -104,6 +103,8 @@ function (_React$Component) {
           value: btnText
         }, btnText)));
       }
+
+      var keyword = profile.keyword || '';
 
       var initialData = _lodash["default"].get(profile, "".concat(prop, ".data"), []);
 

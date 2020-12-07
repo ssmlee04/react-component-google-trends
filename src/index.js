@@ -21,7 +21,7 @@ export class GoogleTrends extends React.Component {
   }
 
   render() {
-    const { profile, prop = 'google_trends', imgProp = 'google_trends_img', keyword } = this.props;
+    const { profile, prop = 'google_trends', imgProp = 'google_trends_img' } = this.props;
     const { copied } = this.state;
     if (!profile) {
       return (
@@ -43,6 +43,7 @@ export class GoogleTrends extends React.Component {
       );
     }
 
+    const keyword = profile.keyword || '';
     const initialData = _.get(profile, `${prop}.data`, []);
     const data = {
       labels: initialData.map(d => d.formattedTime),
