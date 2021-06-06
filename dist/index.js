@@ -102,6 +102,7 @@ function (_React$Component) {
       var initialData = _lodash["default"].get(profile, "".concat(prop, ".data"), []).slice(-1 * count);
 
       var keyword = _lodash["default"].get(profile, "".concat(prop, ".keyword")) || profile.keyword;
+      var dataColor = theme === 'light' ? 'rgba(66, 133, 244, 0.5)' : 'rgba(66, 133, 244, 0.5)';
       var data = {
         labels: initialData.map(function (d) {
           return _dayjs["default"].unix(d.time).format('YYYYMM');
@@ -109,8 +110,8 @@ function (_React$Component) {
         datasets: [{
           fill: true,
           lineTension: 0.1,
-          backgroundColor: '#4285F4',
-          borderColor: '#4285F4',
+          backgroundColor: dataColor,
+          borderColor: dataColor,
           borderCapStyle: 'butt',
           // borderDash: [],
           // borderDashOffset: 0.0,
