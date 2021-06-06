@@ -109,7 +109,7 @@ function (_React$Component) {
         }),
         datasets: [{
           fill: true,
-          lineTension: 0.1,
+          lineTension: 0.5,
           backgroundColor: dataColor,
           borderColor: dataColor,
           borderCapStyle: 'butt',
