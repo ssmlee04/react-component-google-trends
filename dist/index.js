@@ -117,13 +117,13 @@ function (_React$Component) {
           // borderJoinStyle: 'miter',
           pointBorderColor: '#4285F4',
           // pointBackgroundColor: '#fff',
-          borderWidth: 2,
+          borderWidth: 1,
+          pointRadius: 1,
+          pointHoverRadius: 5,
           pointBorderWidth: 1,
-          pointHoverRadius: 0,
           // pointHoverBackgroundColor: 'rgba(75,192,192,1)',
           pointHoverBorderColor: 'rgba(220,220,220,1)',
           // pointHoverBorderWidth: 2,
-          pointRadius: 0,
           // pointHitRadius: 2,
           data: initialData.map(function (d) {
             return d.value;
