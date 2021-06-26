@@ -112,16 +112,11 @@ function (_React$Component) {
           fill: true,
           lineTension: 0.5,
           backgroundColor: dataColor,
-          borderColor: dataColor,
+          borderColor: '#4863A0',
           borderCapStyle: 'butt',
-          // borderDash: [],
-          // borderDashOffset: 0.0,
-          // borderJoinStyle: 'miter',
-          pointBorderColor: '#4285F4',
-          // pointBackgroundColor: '#fff',
           borderWidth: 1,
-          pointRadius: 1,
-          pointHoverRadius: 5,
+          pointRadius: 3,
+          pointHoverRadius: 2,
           pointBorderWidth: 1,
           // pointHoverBackgroundColor: 'rgba(75,192,192,1)',
           pointHoverBorderColor: 'rgba(220,220,220,1)',
@@ -176,7 +171,7 @@ function (_React$Component) {
         }
       }, profile.ticker, " - ", profile.name, "\xA0", _react["default"].createElement("span", {
         className: "theme-green-".concat(theme)
-      }, "Google 5-year Trends")), keyword ? _react["default"].createElement("span", {
+      }, "Google 5-year Trends Analysis")), keyword ? _react["default"].createElement("span", {
         style: {
           fontSize: 12
         }
