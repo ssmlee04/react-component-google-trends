@@ -112,7 +112,7 @@ function (_React$Component) {
           fill: true,
           lineTension: 0.5,
           backgroundColor: dataColor,
-          borderColor: '#4863A0',
+          borderColor: '#1974D2',
           borderCapStyle: 'butt',
           borderWidth: 1,
           pointRadius: 3,
