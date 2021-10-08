@@ -38,7 +38,7 @@ export class GoogleTrends extends React.Component {
 
     const initialData = _.get(profile, `${prop}.data`, []).slice(-1 * count);
     const keyword = _.get(profile, `${prop}.keyword`) || profile.keyword;
-    const dataColor = theme === 'light' ? 'rgba(66, 133, 244, 0.5)' : 'rgba(0, 192, 255, 0.5)';
+    const dataColor = theme === 'light' ? 'rgba(66, 133, 244, 0.3)' : 'rgba(0, 192, 255, 0.5)';
     const gridColor = theme === 'light' ? 'rgba(80, 80, 80, 0.1)' : 'rgba(255, 255, 255, 0.2)';
     const data = {
       labels: initialData.map(d => dayjs.unix(d.time).format('YYYYMM')),
@@ -47,7 +47,7 @@ export class GoogleTrends extends React.Component {
           fill: true,
           lineTension: 0.5,
           backgroundColor: dataColor,
-          borderColor: '#1974D2',
+          borderColor: dataColor,
           borderCapStyle: 'butt',
 
           borderWidth: 1,

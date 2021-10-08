@@ -102,7 +102,7 @@ function (_React$Component) {
       var initialData = _lodash["default"].get(profile, "".concat(prop, ".data"), []).slice(-1 * count);
 
       var keyword = _lodash["default"].get(profile, "".concat(prop, ".keyword")) || profile.keyword;
-      var dataColor = theme === 'light' ? 'rgba(66, 133, 244, 0.5)' : 'rgba(0, 192, 255, 0.5)';
+      var dataColor = theme === 'light' ? 'rgba(66, 133, 244, 0.3)' : 'rgba(0, 192, 255, 0.5)';
       var gridColor = theme === 'light' ? 'rgba(80, 80, 80, 0.1)' : 'rgba(255, 255, 255, 0.2)';
       var data = {
         labels: initialData.map(function (d) {
@@ -112,7 +112,7 @@ function (_React$Component) {
           fill: true,
           lineTension: 0.5,
           backgroundColor: dataColor,
-          borderColor: '#1974D2',
+          borderColor: dataColor,
           borderCapStyle: 'butt',
           borderWidth: 1,
           pointRadius: 3,
